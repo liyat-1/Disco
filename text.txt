@@ -1,0 +1,117 @@
+<div class="content">
+                <h1>Rophnan-Shegiye</h1>
+                <p>
+                    ሸጎዬ ሸጋለም ሸጊቱ
+                    አትመጪም ወይ
+                    ታውቂያለሽ ያላንቺ አይነጋም ለሊቱ
+                    አታይኝም ወይ
+                    <br>
+                    ሰርገኛም መልሰኛም ሆኖ እየዳረ
+                    ልቤ ካንቺ እየዋለ
+                    ይዤሽ ልጠፋ እንደ አሞራ እየዞረ
+                    ሽር ብትን እያለ
+                </p>
+               
+                </div>
+                you see this, this class has an image
+
+                header .song_side::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 233px;
+    background: 
+      /* linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.6) 100%),  */
+      url('Image/Rophnan.png') no-repeat right center;
+    z-index: -1;
+    background-size: 50% 100%;
+    background-blend-mode: overlay; /* Ensures the gradient blends over the image */
+}
+styled like this , what i want is the background to be different
+like for different songs different background 
+like with index and stuff like  
+ {
+        id:"17",
+        songName:`Moth to a Flame
+                            <br>
+                            <div class="subtitle">
+                                Swedish House Mafia ft The weekend
+                            </div>`,
+        poster:"Image/17.jpg"
+    }
+   
+
+]
+
+Array.from(document.getElementsByClassName('songItem')).forEach((element,i)=>{
+    element.getElementsByTagName('img')[0].src = songs[i].poster;
+    element.getElementsByTagName('h5')[0].innerHTML = songs[i].songName;
+})
+
+let masterPlay = document.getElementById('masterPlay');
+let wave = document.getElementsByClassName('wave')[0];
+
+masterPlay.addEventListener('click',()=>{
+    if(music.paused || music.currentTime <= 0){
+        music.play();
+        masterPlay.classList.remove('bi-play');
+        masterPlay.classList.add('bi-pause');
+        wave.classList.add('active2');
+    }else{
+        music.pause();
+        masterPlay.classList.add('bi-play');
+        masterPlay.classList.remove('bi-pause');
+        wave.classList.remove('active2');
+    }
+})
+
+
+
+const makeAllPlays = () =>{
+    Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
+            element.classList.add('bi-play-circle')
+            element.classList.remove('bi-pause-circle')
+       
+    })
+}
+
+const makeAllBackgrounds = () =>{
+    Array.from(document.getElementsByClassName('songItem')).forEach((element)=>{
+            element.style.background ="rgb(105,105,170,0)";
+    })
+}
+
+
+
+let index = 0;
+let poster_master_play = document.getElementById("poster_master_play");
+let title = document.getElementById("title");
+Array.from(document.getElementsByClassName('playListPlay')).forEach((element)=>{
+    element.addEventListener('click',(e)=>{
+        index = e.target.id;
+        makeAllPlays();
+        e.target.classList.remove('bi-play-circle')
+        e.target.classList.add('bi-pause-circle')
+        music.src = `Audio/${index}.mp3`;
+        poster_master_play.src = `Image/${index}.jpg`
+        music.play();
+        let song_title= songs.filter((ele)=>{
+            return ele.id == index;
+        })
+        song_title.forEach(ele =>{
+            let {songName} = ele;
+            title.innerHTML = songName;
+        })
+        masterPlay.classList.remove('bi-play');
+        masterPlay.classList.add('bi-pause');
+        wave.classList.add('active2');
+        music.addEventListener('ended',()=>{
+            masterPlay.classList.add('bi-play');
+            masterPlay.classList.remove('bi-pause');
+            wave.classList.remove('active2');
+        })
+        makeAllBackgrounds();
+        Array.from(document.getElementsByClassName('songItem'))[`${index-1}`].style.background = "rgb(105,105,170,.1)";
+    })
+
+}) this the way this script alligns the poster with the song

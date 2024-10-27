@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title> Disco</title>
+</head>
+<body>
+    <header>
+        <div class="menu_side">
+            <h1>Disco</h1>
+            <div class="playlist">
+                <h4 class="active"><span></span><i class="bi bi-music-note-list"></i> Playlist</h4>
+                <h4><span></span><i class="bi bi-music-note-list"></i> Recently Played</h4>
+                <h4><span></span><i class="bi bi-music-note-list"></i> Recommendation</h4>
+            </div>
+            <div class="menu_song">
+                <li class="songItem">
+                    <span>01</span>
+                    <img src="Image/1.jpg" alt="rophnan">
+                    <h5>
+                        Shegye
+                        <div class="subtitle">
+                            Rophnan
+                        </div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle" id="1"></i>
+                </li>
+                <li class="songItem">
+                    <span>02</span>
+                    <img src="Image/2.jpg" alt="rophnan">
+                    <h5>
+                        Abebaye
+                        <div class="subtitle">
+                            Veronica Adane
+                        </div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle" id="2"></i>
+                </li>
+                <li class="songItem">
+                    <span>03</span>
+                    <img src="Image/3.jpg" alt="rophnan">
+                    <h5>
+                        Chal Zendro
+                        <div class="subtitle">
+                            Dawit Tsige
+                        </div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle" id="3"></i>
+                </li>
+                <li class="songItem">
+                    <span>04</span>
+                    <img src="Image/4.jpg" alt="rophnan">
+                    <h5>
+                        What Goes Around... Comes Around
+                        <div class="subtitle">
+                            Justin Timberlake
+                        </div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle" id="4"></i>
+                </li>
+                <li class="songItem">
+                    <span>05</span>
+                    <img src="Image/5.jpg" alt="rophnan">
+                    <h5>
+                        Blame It On The Rain
+                        <div class="subtitle">
+                            Milli Vanilli
+                        </div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle" id="5"></i>
+                </li>
+                <li class="songItem">
+                    <span>06</span>
+                    <img src="Image/6.jpg" alt="rophnan">
+                    <h5>
+                        She Knows
+                        <div class="subtitle">
+                            J. Cole
+                        </div>
+                    </h5>
+                    <i class="bi playListPlay bi-play-circle" id="6"></i>
+                </li>
+            </div>
+        </div>
+        <div class="song_side">
+            <nav>
+                <ul>
+                    <li>Discover <span></span></li>
+                    <li>My Library</li>
+                    <li>Radio</li>
+                </ul>
+                <div class="search">
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search Music...">
+                </div>
+                <div class="user">
+                    <img src="Image/user.jfif" alt="user" title="User">
+                </div>
+            </nav>
+            <div class="content">
+                <h1 id="songTitle">Song Title</h1>
+                <p id="songLyrics">Lyrics will appear here...</p>
+                <div class="buttons">
+                    <button>Play</button>
+                    <button>Follow</button>
+                </div>
+            </div>
+            <div class="popular_song">
+                <div class="h4">
+                    <h4>Popular Song</h4>
+                    <div class="btn_s">
+                        <i id="left_scroll" class="bi bi-arrow-left"></i>
+                        <i id="right_scroll" class="bi bi-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="pop_song">
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/7.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="7"></i>
+                        </div>
+                        <h5>You Right
+                            <br>
+                            <div class="subtitle">
+                                Doja Cat
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/8.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="8"></i>
+                        </div>
+                        <h5>Bad Guy
+                            <br>
+                            <div class="subtitle">
+                                Billie Eilish
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/9.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="9"></i>
+                        </div>
+                        <h5>Needed Me
+                            <br>
+                            <div class="subtitle">
+                                Rihanna
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/10.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="10"></i>
+                        </div>
+                        <h5>Daddy Issues
+                            <br>
+                            <div class="subtitle">
+                                The Neighbourhood
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/11.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="11"></i>
+                        </div>
+                        <h5>Pacify Her
+                            <br>
+                            <div class="subtitle">
+                                Melanie Martinez
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/12.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="12"></i>
+                        </div>
+                        <h5>Bad Blood
+                            <br>
+                            <div class="subtitle">
+                                Taylor Swift and Kendrick Lamar 
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/13.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="13"></i>
+                        </div>
+                        <h5>Layhonlen | ላይሆንል
+                            <br>
+                            <div class="subtitle">
+                                Ben X Jordan & Bek Ge'ez 
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/14.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="14"></i>
+                        </div>
+                        <h5>Like Crazy
+                            <br>
+                            <div class="subtitle">
+                                Jimin
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/15.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="15"></i>
+                        </div>
+                        <h5>Fetish
+                            <br>
+                            <div class="subtitle">
+                                Selena Gomez
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/16.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="16"></i>
+                        </div>
+                        <h5>Have Mercy
+                            <br>
+                            <div class="subtitle">
+                                Chlöe
+                            </div>
+                        </h5>
+                    </li>
+                    <br>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="Image/17.jpg" alt="rophnana">
+                            <i class="bi playListPlay bi-play-circle" id="17"></i>
+                        </div>
+                        <h5>Moth to a Flame
+                            <br>
+                            <div class="subtitle">
+                                Swedish House Mafia ft The weekend
+                            </div>
+                        </h5>
+                    </li>
+                </div>
+            </div>
+            <div class="popular_artists">
+                <div class="h4">
+                    <h4>Popular Artists</h4>
+                    <div class="btn_s">
+                        <i id="left_scrolls" class="bi bi-arrow-left"></i>
+                        <i id="right_scrolls" class="bi bi-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="item">
+                    <li>
+                        <img src="Image/rophnan-sidist.webp" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/abel tesfaye.webp" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/ariana.jpg" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/beyonce.webp" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/dawit-Tsige.png" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/meghan.webp" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/millii.jpg" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/riri.jpg" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/veronica.jpg" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/abel tesfaye.webp" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/riri.jpg" alt="artist" title="Rophnan">
+                    </li>
+                    <li>
+                        <img src="Image/dawit-Tsige.png " alt="artist" title="Rophnan">
+                    </li>
+                </div>
+            </div>    
+        </div>
+        <div class="master_play">
+            <div class="wave">
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="Image/1.jfif" alt="rophnan" id="poster_master_play">
+            <h5 id="title">
+                Shegye <br>
+                <div class="subtitle">
+                    Rophnan
+                </div>
+            </h5>
+            <div class="icon">
+                <i class="bi bi-skip-backward" id="back"></i>
+                <i class="bi bi-play" id="masterPlay"></i>
+                <i class="bi bi-skip-forward" id="next"></i>
+            </div>
+            <span id="currentStart">0:00</span>
+            <div class="bar">
+                <input type="range" id="seek" min="0" value="0" max="100">
+                <div class="bar2" id="bar2">
+                    <div class="dot">
+                    </div>
+                </div>
+            </div>
+            <span id="currentEnd">0:00</span>
+            <div class="vol">
+                <i class="bi bi-volume-down" id="vol_icon"></i>
+                <input type="range" id="vol" min="0" value="30" max="100">
+                <div class="vol_bar">
+                    <div class="dot" id="vol_dot">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="app.js"></script>
+</body>
+</html>
